@@ -1,0 +1,36 @@
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+    	<route-files value="ffk-bast-210903-00.rou.xml" />
+        <net-file value="../frankfurter-kreuz.net.xml" />
+        <additional-files value="../frankfurter-kreuz.poly.xml" />
+    </input>
+
+    <time>
+        <step-length value="0.1" />
+    </time>
+
+    <processing>
+        <ignore-route-errors value="true" />
+    </processing>
+
+    <routing>
+        <device.rerouting.adaptation-steps value="18" />
+        <device.rerouting.adaptation-interval value="10" />
+    </routing>
+
+    <report>
+        <verbose value="true" />
+        <duration-log.statistics value="true" />
+        <no-step-log value="true" />
+    </report>
+
+    <gui_only>
+        <gui-settings-file value="../frankfurter-kreuz.view.xml" />
+    </gui_only>
+
+    <random_number>
+        <seed value="23423" />
+    </random_number>
+
+</configuration>

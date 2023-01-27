@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+
+    <!--
+        truck, semitrailer and truck_trailer size calculated by using inner size from [0]
+        and adding 2m length and 1m height according to [1]
+        
+        [0] https://www.alpensped.de/leistungen/fuhrpark/
+        [1] https://www.wuerth-transporte.de/1.html
+    -->
+    <vType id="motorcycle" vClass="motorcycle" lcStrategic="0.75" lcCooperative="0.7" lcLookaheadLeft="0.7" lcPushy="0.2" lcAssertive="1.5" lcSigma="0.2" />
+    <vType id="passenger" vClass="passenger" lcStrategic="0.75" lcCooperative="0.7" lcLookaheadLeft="0.7" lcPushy="0.2" lcAssertive="1.5" lcSigma="0.2" />
+    <vType id="passenger_misc" vClass="passenger" lcStrategic="0.75" lcCooperative="0.7" lcLookaheadLeft="0.7" lcPushy="0.2" lcAssertive="1.5" lcSigma="0.2" />
+    <vType id="van" vClass="passenger" guiShape="passenger/van" length="4.7" width="1.9" height="1.73" lcStrategic="0.75" lcCooperative="0.7" lcLookaheadLeft="0.7" lcPushy="0.2" lcAssertive="1.5" lcSigma="0.2" />
+    <vType id="passenger_trailer" vClass="passenger" length="7.5" width="2" height="2.2" lcStrategic="0.75" lcCooperative="0.7" lcLookaheadLeft="0.7" lcPushy="0.2" lcAssertive="1.5" lcSigma="0.2" />
+    <vType id="truck" vClass="truck" length="9" width="2.45" height="3.6" maxSpeed="80" lcStrategic="0.75" lcCooperative="0.7" lcLookaheadLeft="0.7" lcPushy="0.2" lcAssertive="1.5" lcSigma="0.2" lcKeepRight="100" lcSpeedGain="0.1" />
+    <vType id="semitrailer" vClass="truck" guiShape="truck/semitrailer" length="15.6" width="2.5" height="4.04" maxSpeed="80" lcStrategic="0.75" lcCooperative="0.7" lcLookaheadLeft="0.7" lcPushy="0.2" lcAssertive="1.5" lcSigma="0.2" lcKeepRight="100" lcSpeedGain="0.1" />
+    <vType id="truck_trailer" vClass="truck" guiShape="truck/trailer" length="17.6" width="2.5" height="4.20" maxSpeed="80" lcStrategic="0.75" lcCooperative="0.7" lcLookaheadLeft="0.7" lcPushy="0.2" lcAssertive="1.5" lcSigma="0.2" lcKeepRight="100" lcSpeedGain="0.1" />
+    <vType id="bus" vClass="bus" lcStrategic="0.75" lcCooperative="0.7" lcLookaheadLeft="0.7" lcPushy="0.2" lcAssertive="1.5" lcSigma="0.2" lcKeepRight="100" lcSpeedGain="0.1" />
+
+    <route edges="3993621 3993622" color="yellow" id="A3O-A3W" />
+    <route edges="3993621 4488572 387746873 153320423 132979567 23286294 4488573 419865347 4488587 234004932 4488588 39175423" color="yellow" id="A3O-A3W-alt" />
+    <route edges="3993621 4488572 387746873 153320423 132979567 20437071 4780826 132979549 23286356 23286447 A5N1" color="yellow" id="A3O-A5N" />
+    <route edges="3993621 4488572 387746873 153320423 132979567 23286294 4488573 4488575 4488577 23286237 481371695 236522916 A5S2" color="yellow" id="A3O-A5S" />
+    <route edges="133039111 4728785 37976720 152367113 307216717 3993482 153261740 153261739 3993501" color="yellow" id="A3W-A3O" />
+    <route edges="133039111 20644480 108035020 228932147 4728850 387746860 20630373 4893840 234004960 387746834 4488560#0 4488560#1 387746832 4488561 26529486 387746829#1 132979552 A5N1" color="yellow" id="A3W-A5N" />
+    <route edges="133039111 20644480 108035020 228932147 4728850 387746860 4488582 228932146 481371695 236522916 A5S2" color="yellow" id="A3W-A5S" />
+    <route edges="133039111 20644480 108035020 228932147 4728850 387746860 20630373 4893840 234004960 387746834 4488560#0 4488560#1 387746832 4488561 26529486 387746829#1 4488569#0 4488569#1 4743817 419865353 152377568 152377560 152377574#1 234004943 38238212" color="yellow" id="A3W-B43W" />
+    <route edges="A5N2 358653882-AddedOffRampEdge 321554750 387746861 75436542 23286376 4488583 4488577 20630094 4893840 234004960 387746834 4488560#0 4488560#1 387746832 4488561 26529486 387746829#1 132979552 A5N1" color="yellow" id="A5N-A5N" />
+    <route edges="A5N2 358653882-AddedOffRampEdge 321554750 387746861 75436542 23286376 4488583 4488577 20630094 4893840 234004960 387746818 23286266 4488571 307213473 307216717 3993482 153261740 153261739 3993501" color="yellow" id="A5N-A3O" />
+    <route edges="A5N2 358653882-AddedOffRampEdge 321554750 387746861 75436542 23286376 4488585#0 4488585#1 4488588 39175423" color="yellow" id="A5N-A3W" />
+    <route edges="A5N2 358653882-AddedOffRampEdge 23286357 23286423 23286426 A5S2" color="yellow" id="A5N-A5S" />
+    <route edges="A5N2 358653882-AddedOffRampEdge 321554750 4488594 419865353 152377568 152377560 152377574#1 234004943 38238212" color="yellow" id="A5N-B43W" />
+    <route edges="A5S1 4488554 39175135 387746811 156265645 23286275 4488571 307213473 307216717 3993482 153261740 153261739 3993501" color="yellow" id="A5S-A3O" />
+    <route edges="A5S1 4488554 20629597 387746862 132979565 4488561 387746825 4488563 4488573 419865347 4488587 234004932 4488588 39175423" color="yellow" id="A5S-A3W" />
+    <route edges="A5S1 23286478 23286356 23286447 A5N1" color="yellow" id="A5S-A5N" />
+    <route edges="A5S1 4488554 20629597 387746862 132979565 4488561 26529486 387746829#1 132979552 A5N1" color="yellow" id="A5S-A5N-alt" />
+    <route edges="A5S1 4488554 20629597 387746862 132979565 4488561 26529486 387746829#1 4488569#0 4488569#1 4743817 419865353 152377568 152377560 152377574#1 234004943 38238212" color="yellow" id="A5S-B43W" />
+    <route edges="23337333 4746513 23337441 4743817 419865353 152377568 152377560 152377574#1 234004943 38238212" color="yellow" id="B43O-B43W" />
+    <route edges="89837133 152303549 433450247 45781803 152377567 152377561 152446429 49203928 387746833 4780826 132979549 23286356 23286447 A5N1" color="yellow" id="B43W-A5N" />
+    <route edges="89837133 152303549 433450247 45781803 152377567 152377561 152446429 4488584#0 4488584#1 23286423 23286426 A5S2" color="yellow" id="B43W-A5S" />
+    <route edges="89837133 152303549 433450247 45781803 152377567 152377561 152446429 49203928 4743818 23337443 4746512" color="yellow" id="B43W-B43O" />
+
+    <!--
+        Flows generated by bast2scenario-tool.
+        Reference file: "../../frankfurter-kreuz-ref.rou.xml"
+        Date: 210903
+        Hour: 17
+    -->
+
+    <flow route="A3O-A3W" type="passenger" id="210903_17_flow_A3O-A3W_passenger" probability="0.529868634043083" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A3W" type="van" id="210903_17_flow_A3O-A3W_van" probability="0.07178174158469264" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A3W" type="motorcycle" id="210903_17_flow_A3O-A3W_motorcycle" probability="0.009795376250363176" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A3W" type="passenger_misc" id="210903_17_flow_A3O-A3W_passenger_misc" probability="0.010866745527746647" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A3W" type="passenger_trailer" id="210903_17_flow_A3O-A3W_passenger_trailer" probability="0.006428215664300834" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A3W" type="bus" id="210903_17_flow_A3O-A3W_bus" probability="0.0013774747852073217" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A3W" type="truck" id="210903_17_flow_A3O-A3W_truck" probability="0.02418233511808409" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A3W" type="truck_trailer" id="210903_17_flow_A3O-A3W_truck_trailer" probability="0.009030112480803551" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A3W" type="semitrailer" id="210903_17_flow_A3O-A3W_semitrailer" probability="0.03642655543103806" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="A3O-A3W-alt" type="passenger" id="210903_17_flow_A3O-A3W-alt_passenger" probability="0.08513821441912589" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A3W-alt" type="van" id="210903_17_flow_A3O-A3W-alt_van" probability="0.01153374424106587" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A3W-alt" type="motorcycle" id="210903_17_flow_A3O-A3W-alt_motorcycle" probability="0.001573901133109202" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A3W-alt" type="passenger_misc" id="210903_17_flow_A3O-A3W-alt_passenger_misc" probability="0.001746046569543021" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A3W-alt" type="passenger_trailer" id="210903_17_flow_A3O-A3W-alt_passenger_trailer" probability="0.001032872618602914" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A3W-alt" type="bus" id="210903_17_flow_A3O-A3W-alt_bus" probability="0.00022132984684348152" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A3W-alt" type="truck" id="210903_17_flow_A3O-A3W-alt_truck" probability="0.0038855684223633425" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A3W-alt" type="truck_trailer" id="210903_17_flow_A3O-A3W-alt_truck_trailer" probability="0.0014509401070850456" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A3W-alt" type="semitrailer" id="210903_17_flow_A3O-A3W-alt_semitrailer" probability="0.005852944838749844" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="A3O-A5N" type="passenger" id="210903_17_flow_A3O-A5N_passenger" probability="0.22954986925663054" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A5N" type="van" id="210903_17_flow_A3O-A5N_van" probability="0.031097310422114305" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A5N" type="motorcycle" id="210903_17_flow_A3O-A5N_motorcycle" probability="0.004243556219648861" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A5N" type="passenger_misc" id="210903_17_flow_A3O-A5N_passenger_misc" probability="0.004707695181172955" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A5N" type="passenger_trailer" id="210903_17_flow_A3O-A5N_passenger_trailer" probability="0.002784833769144565" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A5N" type="bus" id="210903_17_flow_A3O-A5N_bus" probability="0.0005967500933881211" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A5N" type="truck" id="210903_17_flow_A3O-A5N_truck" probability="0.010476279417258125" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A5N" type="truck_trailer" id="210903_17_flow_A3O-A5N_truck_trailer" probability="0.0039120283899887935" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A5N" type="semitrailer" id="210903_17_flow_A3O-A5N_semitrailer" probability="0.015780724691819202" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="A3O-A5S" type="passenger" id="210903_17_flow_A3O-A5S_passenger" probability="0.11710994894782718" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A5S" type="van" id="210903_17_flow_A3O-A5S_van" probability="0.015864981529904953" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A5S" type="motorcycle" id="210903_17_flow_A3O-A5S_motorcycle" probability="0.0021649441746565395" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A5S" type="passenger_misc" id="210903_17_flow_A3O-A5S_passenger_misc" probability="0.0024017349437595982" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A5S" type="passenger_trailer" id="210903_17_flow_A3O-A5S_passenger_trailer" probability="0.0014207446146183539" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A5S" type="bus" id="210903_17_flow_A3O-A5S_bus" probability="0.00030444527456107584" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A5S" type="truck" id="210903_17_flow_A3O-A5S_truck" probability="0.005344705931183332" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A5S" type="truck_trailer" id="210903_17_flow_A3O-A5S_truck_trailer" probability="0.001995807911011497" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3O-A5S" type="semitrailer" id="210903_17_flow_A3O-A5S_semitrailer" probability="0.008050886149504007" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="A3W-A3O" type="passenger" id="210903_17_flow_A3W-A3O_passenger" probability="0.670577137008855" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A3O" type="van" id="210903_17_flow_A3W-A3O_van" probability="0.07846571441285098" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A3O" type="motorcycle" id="210903_17_flow_A3W-A3O_motorcycle" probability="0.007618030525519512" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A3O" type="passenger_misc" id="210903_17_flow_A3W-A3O_passenger_misc" probability="0.016950117919280916" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A3O" type="passenger_trailer" id="210903_17_flow_A3W-A3O_passenger_trailer" probability="0.010665242735727316" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A3O" type="bus" id="210903_17_flow_A3W-A3O_bus" probability="0.0034281137364837806" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A3O" type="truck" id="210903_17_flow_A3W-A3O_truck" probability="0.027424909891870245" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A3O" type="truck_trailer" id="210903_17_flow_A3W-A3O_truck_trailer" probability="0.015426511814177011" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A3O" type="semitrailer" id="210903_17_flow_A3W-A3O_semitrailer" probability="0.06437235794063988" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="A3W-A5N" type="passenger" id="210903_17_flow_A3W-A5N_passenger" probability="0.13826736528278377" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A5N" type="van" id="210903_17_flow_A3W-A5N_van" probability="0.016178970319939482" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A5N" type="motorcycle" id="210903_17_flow_A3W-A5N_motorcycle" probability="0.0015707738174698526" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A5N" type="passenger_misc" id="210903_17_flow_A3W-A5N_passenger_misc" probability="0.003494971743870422" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A5N" type="passenger_trailer" id="210903_17_flow_A3W-A5N_passenger_trailer" probability="0.0021990833444577936" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A5N" type="bus" id="210903_17_flow_A3W-A5N_bus" probability="0.0007068482178614336" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A5N" type="truck" id="210903_17_flow_A3W-A5N_truck" probability="0.005654785742891469" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A5N" type="truck_trailer" id="210903_17_flow_A3W-A5N_truck_trailer" probability="0.0031808169803764514" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A5N" type="semitrailer" id="210903_17_flow_A3W-A5N_semitrailer" probability="0.013273038757620254" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="A3W-A5S" type="passenger" id="210903_17_flow_A3W-A5S_passenger" probability="0.16764428425221375" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A5S" type="van" id="210903_17_flow_A3W-A5S_van" probability="0.019616428603212745" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A5S" type="motorcycle" id="210903_17_flow_A3W-A5S_motorcycle" probability="0.001904507631379878" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A5S" type="passenger_misc" id="210903_17_flow_A3W-A5S_passenger_misc" probability="0.004237529479820229" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A5S" type="passenger_trailer" id="210903_17_flow_A3W-A5S_passenger_trailer" probability="0.002666310683931829" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A5S" type="bus" id="210903_17_flow_A3W-A5S_bus" probability="0.0008570284341209452" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A5S" type="truck" id="210903_17_flow_A3W-A5S_truck" probability="0.006856227472967561" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A5S" type="truck_trailer" id="210903_17_flow_A3W-A5S_truck_trailer" probability="0.0038566279535442527" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-A5S" type="semitrailer" id="210903_17_flow_A3W-A5S_semitrailer" probability="0.01609308948515997" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="A3W-B43W" type="passenger" id="210903_17_flow_A3W-B43W_passenger" probability="0.0015667690117029324" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-B43W" type="van" id="210903_17_flow_A3W-B43W_van" probability="0.0001833311084412406" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-B43W" type="motorcycle" id="210903_17_flow_A3W-B43W_motorcycle" probability="1.779913674186802e-05" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-B43W" type="passenger_misc" id="210903_17_flow_A3W-B43W_passenger_misc" probability="3.9603079250656344e-05" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-B43W" type="passenger_trailer" id="210903_17_flow_A3W-B43W_passenger_trailer" probability="2.4918791438615227e-05" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-B43W" type="bus" id="210903_17_flow_A3W-B43W_bus" probability="8.009611533840608e-06" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-B43W" type="truck" id="210903_17_flow_A3W-B43W_truck" probability="6.407689227072486e-05" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-B43W" type="truck_trailer" id="210903_17_flow_A3W-B43W_truck_trailer" probability="3.604325190228274e-05" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A3W-B43W" type="semitrailer" id="210903_17_flow_A3W-B43W_semitrailer" probability="0.00015040270546878476" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="A5N-A5N" type="passenger" id="210903_17_flow_A5N-A5N_passenger" probability="0.025362023324032337" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A5N" type="van" id="210903_17_flow_A5N-A5N_van" probability="0.0026836946411962505" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A5N" type="motorcycle" id="210903_17_flow_A5N-A5N_motorcycle" probability="0.00046576518566215924" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A5N" type="passenger_misc" id="210903_17_flow_A5N-A5N_passenger_misc" probability="0.0005101237747728411" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A5N" type="passenger_trailer" id="210903_17_flow_A5N-A5N_passenger_trailer" probability="0.00023288259283107962" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A5N" type="bus" id="210903_17_flow_A5N-A5N_bus" probability="8.871717822136366e-05" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A5N" type="truck" id="210903_17_flow_A5N-A5N_truck" probability="0.0006875581312155684" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A5N" type="truck_trailer" id="210903_17_flow_A5N-A5N_truck_trailer" probability="0.00016634470916505686" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A5N" type="semitrailer" id="210903_17_flow_A5N-A5N_semitrailer" probability="0.0006931029548544036" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="A5N-A3O" type="passenger" id="210903_17_flow_A5N-A3O_passenger" probability="0.18735172068398082" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A3O" type="van" id="210903_17_flow_A5N-A3O_van" probability="0.019824712026901337" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A3O" type="motorcycle" id="210903_17_flow_A5N-A3O_motorcycle" probability="0.003440652500536596" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A3O" type="passenger_misc" id="210903_17_flow_A5N-A3O_passenger_misc" probability="0.003768333691063891" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A3O" type="passenger_trailer" id="210903_17_flow_A5N-A3O_passenger_trailer" probability="0.001720326250268298" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A3O" type="bus" id="210903_17_flow_A5N-A3O_bus" probability="0.0006553623810545897" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A3O" type="truck" id="210903_17_flow_A5N-A3O_truck" probability="0.005079058453173069" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A3O" type="truck_trailer" id="210903_17_flow_A5N-A3O_truck_trailer" probability="0.0012288044644773557" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A3O" type="semitrailer" id="210903_17_flow_A5N-A3O_semitrailer" probability="0.005120018601988982" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="A5N-A3W" type="passenger" id="210903_17_flow_A5N-A3W_passenger" probability="0.17835229305287256" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A3W" type="van" id="210903_17_flow_A5N-A3W_van" probability="0.018872433283251056" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A3W" type="motorcycle" id="210903_17_flow_A5N-A3W_motorcycle" probability="0.003275380983043571" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A3W" type="passenger_misc" id="210903_17_flow_A5N-A3W_passenger_misc" probability="0.0035873220290477213" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A3W" type="passenger_trailer" id="210903_17_flow_A5N-A3W_passenger_trailer" probability="0.0016376904915217855" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A3W" type="bus" id="210903_17_flow_A5N-A3W_bus" probability="0.0006238820920082993" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A3W" type="truck" id="210903_17_flow_A5N-A3W_truck" probability="0.004835086213064319" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A3W" type="truck_trailer" id="210903_17_flow_A5N-A3W_truck_trailer" probability="0.0011697789225155613" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A3W" type="semitrailer" id="210903_17_flow_A5N-A3W_semitrailer" probability="0.004874078843814839" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="A5N-A5S" type="passenger" id="210903_17_flow_A5N-A5S_passenger" probability="0.6954103169492738" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A5S" type="van" id="210903_17_flow_A5N-A5S_van" probability="0.07358517564570366" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A5S" type="motorcycle" id="210903_17_flow_A5N-A5S_motorcycle" probability="0.012770980897188238" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A5S" type="passenger_misc" id="210903_17_flow_A5N-A5S_passenger_misc" probability="0.013987264792158546" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A5S" type="passenger_trailer" id="210903_17_flow_A5N-A5S_passenger_trailer" probability="0.006385490448594119" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A5S" type="bus" id="210903_17_flow_A5N-A5S_bus" probability="0.002432567789940617" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A5S" type="truck" id="210903_17_flow_A5N-A5S_truck" probability="0.018852400372039783" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A5S" type="truck_trailer" id="210903_17_flow_A5N-A5S_truck_trailer" probability="0.004561064606138657" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-A5S" type="semitrailer" id="210903_17_flow_A5N-A5S_semitrailer" probability="0.019004435858911067" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="A5N-B43W" type="passenger" id="210903_17_flow_A5N-B43W_passenger" probability="0.18407920154539603" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-B43W" type="van" id="210903_17_flow_A5N-B43W_van" probability="0.019478428847392145" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-B43W" type="motorcycle" id="210903_17_flow_A5N-B43W_motorcycle" probability="0.0033805537669027693" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-B43W" type="passenger_misc" id="210903_17_flow_A5N-B43W_passenger_misc" probability="0.0037025112685125567" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-B43W" type="passenger_trailer" id="210903_17_flow_A5N-B43W_passenger_trailer" probability="0.0016902768834513846" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-B43W" type="bus" id="210903_17_flow_A5N-B43W_bus" probability="0.0006439150032195751" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-B43W" type="truck" id="210903_17_flow_A5N-B43W_truck" probability="0.004990341274951706" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-B43W" type="truck_trailer" id="210903_17_flow_A5N-B43W_truck_trailer" probability="0.0012073406310367032" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5N-B43W" type="semitrailer" id="210903_17_flow_A5N-B43W_semitrailer" probability="0.005030585962652929" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="A5S-A3O" type="passenger" id="210903_17_flow_A5S-A3O_passenger" probability="0.2070167427701674" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A3O" type="van" id="210903_17_flow_A5S-A3O_van" probability="0.02024353120243531" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A3O" type="motorcycle" id="210903_17_flow_A5S-A3O_motorcycle" probability="0.00213089802130898" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A3O" type="passenger_misc" id="210903_17_flow_A5S-A3O_passenger_misc" probability="0.004368340943683409" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A3O" type="passenger_trailer" id="210903_17_flow_A5S-A3O_passenger_trailer" probability="0.0026103500761035007" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A3O" type="bus" id="210903_17_flow_A5S-A3O_bus" probability="0.0005859969558599696" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A3O" type="truck" id="210903_17_flow_A5S-A3O_truck" probability="0.006552511415525113" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A3O" type="truck_trailer" id="210903_17_flow_A5S-A3O_truck_trailer" probability="0.0020776255707762557" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A3O" type="semitrailer" id="210903_17_flow_A5S-A3O_semitrailer" probability="0.012465753424657533" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="A5S-A3W" type="passenger" id="210903_17_flow_A5S-A3W_passenger" probability="0.09365043125317098" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A3W" type="van" id="210903_17_flow_A5S-A3W_van" probability="0.00915778792491121" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A3W" type="motorcycle" id="210903_17_flow_A5S-A3W_motorcycle" probability="0.0009639776763064433" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A3W" type="passenger_misc" id="210903_17_flow_A5S-A3W_passenger_misc" probability="0.001976154236428209" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A3W" type="passenger_trailer" id="210903_17_flow_A5S-A3W_passenger_trailer" probability="0.001180872653475393" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A3W" type="bus" id="210903_17_flow_A5S-A3W_bus" probability="0.00026509386098427193" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A3W" type="truck" id="210903_17_flow_A5S-A3W_truck" probability="0.0029642313546423132" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A3W" type="truck_trailer" id="210903_17_flow_A5S-A3W_truck_trailer" probability="0.0009398782343987823" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A3W" type="semitrailer" id="210903_17_flow_A5S-A3W_semitrailer" probability="0.0056392694063926935" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="A5S-A5N" type="passenger" id="210903_17_flow_A5S-A5N_passenger" probability="0.6445576240096788" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A5N" type="van" id="210903_17_flow_A5S-A5N_van" probability="0.06302930960465207" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A5N" type="motorcycle" id="210903_17_flow_A5S-A5N_motorcycle" probability="0.006634664168910744" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A5N" type="passenger_misc" id="210903_17_flow_A5S-A5N_passenger_misc" probability="0.013601061546267026" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A5N" type="passenger_trailer" id="210903_17_flow_A5S-A5N_passenger_trailer" probability="0.008127463606915662" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A5N" type="bus" id="210903_17_flow_A5S-A5N_bus" probability="0.0018245326464504548" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A5N" type="truck" id="210903_17_flow_A5S-A5N_truck" probability="0.02040159231940054" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A5N" type="truck_trailer" id="210903_17_flow_A5S-A5N_truck_trailer" probability="0.006468797564687976" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A5N" type="semitrailer" id="210903_17_flow_A5S-A5N_semitrailer" probability="0.03881278538812786" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="A5S-A5N-alt" type="passenger" id="210903_17_flow_A5S-A5N-alt_passenger" probability="0.0018957577176755259" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A5N-alt" type="van" id="210903_17_flow_A5S-A5N-alt_van" probability="0.00018538032236662373" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A5N-alt" type="motorcycle" id="210903_17_flow_A5S-A5N-alt_motorcycle" probability="1.951371814385513e-05" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A5N-alt" type="passenger_misc" id="210903_17_flow_A5S-A5N-alt_passenger_misc" probability="4.0003122194903016e-05" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A5N-alt" type="passenger_trailer" id="210903_17_flow_A5S-A5N-alt_passenger_trailer" probability="2.3904304726222537e-05" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A5N-alt" type="bus" id="210903_17_flow_A5S-A5N-alt_bus" probability="5.366272489560161e-06" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A5N-alt" type="truck" id="210903_17_flow_A5S-A5N-alt_truck" probability="6.0004683292354525e-05" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A5N-alt" type="truck_trailer" id="210903_17_flow_A5S-A5N-alt_truck_trailer" probability="1.902587519025875e-05" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-A5N-alt" type="semitrailer" id="210903_17_flow_A5S-A5N-alt_semitrailer" probability="0.00011415525114155251" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="A5S-B43W" type="passenger" id="210903_17_flow_A5S-B43W_passenger" probability="0.13232388869375172" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-B43W" type="van" id="210903_17_flow_A5S-B43W_van" probability="0.012939546501190337" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-B43W" type="motorcycle" id="210903_17_flow_A5S-B43W_motorcycle" probability="0.0013620575264410883" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-B43W" type="passenger_misc" id="210903_17_flow_A5S-B43W_passenger_misc" probability="0.0027922179292042305" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-B43W" type="passenger_trailer" id="210903_17_flow_A5S-B43W_passenger_trailer" probability="0.0016685204698903327" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-B43W" type="bus" id="210903_17_flow_A5S-B43W_bus" probability="0.0003745658197712992" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-B43W" type="truck" id="210903_17_flow_A5S-B43W_truck" probability="0.004188326893806346" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-B43W" type="truck_trailer" id="210903_17_flow_A5S-B43W_truck_trailer" probability="0.0013280060882800608" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="A5S-B43W" type="semitrailer" id="210903_17_flow_A5S-B43W_semitrailer" probability="0.007968036529680365" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="B43O-B43W" type="passenger" id="210903_17_flow_B43O-B43W_passenger" probability="0.39666666666666667" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43O-B43W" type="van" id="210903_17_flow_B43O-B43W_van" probability="0.05722222222222222" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43O-B43W" type="motorcycle" id="210903_17_flow_B43O-B43W_motorcycle" probability="0.0033333333333333335" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43O-B43W" type="passenger_misc" id="210903_17_flow_B43O-B43W_passenger_misc" probability="0.02" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43O-B43W" type="passenger_trailer" id="210903_17_flow_B43O-B43W_passenger_trailer" probability="0.0016666666666666668" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43O-B43W" type="bus" id="210903_17_flow_B43O-B43W_bus" probability="0.005" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43O-B43W" type="truck" id="210903_17_flow_B43O-B43W_truck" probability="0.008333333333333333" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43O-B43W" type="truck_trailer" id="210903_17_flow_B43O-B43W_truck_trailer" probability="0.0022222222222222222" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43O-B43W" type="semitrailer" id="210903_17_flow_B43O-B43W_semitrailer" probability="0.006944444444444444" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="B43W-A5N" type="passenger" id="210903_17_flow_B43W-A5N_passenger" probability="0.177404047452896" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-A5N" type="van" id="210903_17_flow_B43W-A5N_van" probability="0.02048964875552454" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-A5N" type="motorcycle" id="210903_17_flow_B43W-A5N_motorcycle" probability="0.0025071722105916103" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-A5N" type="passenger_misc" id="210903_17_flow_B43W-A5N_passenger_misc" probability="0.004236256493758238" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-A5N" type="passenger_trailer" id="210903_17_flow_B43W-A5N_passenger_trailer" probability="0.001296813212374971" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-A5N" type="bus" id="210903_17_flow_B43W-A5N_bus" probability="0.00043227107079165696" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-A5N" type="truck" id="210903_17_flow_B43W-A5N_truck" probability="0.0038039854229665816" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-A5N" type="truck_trailer" id="210903_17_flow_B43W-A5N_truck_trailer" probability="0.0014697216406916336" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-A5N" type="semitrailer" id="210903_17_flow_B43W-A5N_semitrailer" probability="0.0063111576335581916" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="B43W-A5S" type="passenger" id="210903_17_flow_B43W-A5S_passenger" probability="0.11097697138869504" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-A5S" type="van" id="210903_17_flow_B43W-A5S_van" probability="0.01281751570132589" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-A5S" type="motorcycle" id="210903_17_flow_B43W-A5S_motorcycle" probability="0.0015683879972086532" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-A5S" type="passenger_misc" id="210903_17_flow_B43W-A5S_passenger_misc" probability="0.002650034891835311" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-A5S" type="passenger_trailer" id="210903_17_flow_B43W-A5S_passenger_trailer" probability="0.000811235170969993" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-A5S" type="bus" id="210903_17_flow_B43W-A5S_bus" probability="0.0002704117236566643" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-A5S" type="truck" id="210903_17_flow_B43W-A5S_truck" probability="0.002379623168178646" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-A5S" type="truck_trailer" id="210903_17_flow_B43W-A5S_truck_trailer" probability="0.0009193998604326587" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-A5S" type="semitrailer" id="210903_17_flow_B43W-A5S_semitrailer" probability="0.003948011165387299" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+    <flow route="B43W-B43O" type="passenger" id="210903_17_flow_B43W-B43O_passenger" probability="0.28161898115840894" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-B43O" type="van" id="210903_17_flow_B43W-B43O_van" probability="0.0325261688764829" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-B43O" type="motorcycle" id="210903_17_flow_B43W-B43O_motorcycle" probability="0.003979995347755292" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-B43O" type="passenger_misc" id="210903_17_flow_B43W-B43O_passenger_misc" probability="0.006724819725517562" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-B43O" type="passenger_trailer" id="210903_17_flow_B43W-B43O_passenger_trailer" probability="0.002058618283321703" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-B43O" type="bus" id="210903_17_flow_B43W-B43O_bus" probability="0.0006862060944405675" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-B43O" type="truck" id="210903_17_flow_B43W-B43O_truck" probability="0.0060386136310769944" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-B43O" type="truck_trailer" id="210903_17_flow_B43W-B43O_truck_trailer" probability="0.0023331007210979295" begin="0" end="3599" departLane="best" departSpeed="max" />
+    <flow route="B43W-B43O" type="semitrailer" id="210903_17_flow_B43W-B43O_semitrailer" probability="0.010018608978832286" begin="0" end="3599" departLane="best" departSpeed="max" />
+
+</routes>
