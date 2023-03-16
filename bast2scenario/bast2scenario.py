@@ -179,7 +179,7 @@ for h in hour_range:
                     flow += 'route="' + in_station + '-' + out_station + '" '
                     flow += 'type="' + ibr_vehicle + '" '
                     flow += 'id="' + str(c.DATE) + '_' + str(h).zfill(2) + '_flow_' + in_station + '-' + out_station + '_' + ibr_vehicle + '" '
-                    flow += 'probability="'+str(vehsPerHour/3600) + '" '
+                    flow += 'probability="'+ '{0:.20f}'.format(vehsPerHour/3600) + '" '
                     # 'begin' and 'end' attributes are only added here, if not specified in FLOW_PARAMS
                     # If a whole day is generated, FLOW_WARMUP is only added to the first hour
                     if (c.HOUR == 0 and h == 1) or (c.HOUR > 0):
