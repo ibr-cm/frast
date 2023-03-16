@@ -36,7 +36,7 @@ YEAR = int("20" + str(DATE)[0:2])
 DATA_DIR = "bast-data"
 
 # Reference .rou.xml/.sumocfg file
-REF_FILE = "../frankfurter-kreuz-ref"
+REF_FILE = "../ffk-reference/frankfurter-kreuz-ref"
 
 # Counting Stations
 STATIONS = pd.DataFrame({

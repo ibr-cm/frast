@@ -7,8 +7,8 @@
 
     <input>
     	<route-files value="frankfurter-kreuz-ref.rou.xml"/>
-        <net-file value="frankfurter-kreuz.net.xml"/>
-        <additional-files value="frankfurter-kreuz.poly.xml"/>
+        <net-file value="../frankfurter-kreuz.net.xml"/>
+        <additional-files value="../frankfurter-kreuz.poly.xml"/>
     </input>
 
     <time>
@@ -31,7 +31,7 @@
     </report>
 
     <gui_only>
-        <gui-settings-file value="frankfurter-kreuz.view.xml"/>
+        <gui-settings-file value="../frankfurter-kreuz.view.xml"/>
     </gui_only>
 
     <random_number>
